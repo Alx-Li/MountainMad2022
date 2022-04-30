@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { useRouter,withRouter } from "next/router";
 
 import img from "../public/img/old-woman.png";
 
@@ -32,16 +33,28 @@ const initialState = {
   speed: 250,
 };
 
-class Snake extends Component {
+let score = 0;
+
+
+
+
+export default withRouter(class Snake extends Component {
+  
+
+
   constructor(props) {
     super();
     this.state = initialState;
   }
 
+  
+
   componentDidMount() {
     setInterval(this.moveSnake, this.state.speed);
     document.onkeydown = this.changeDirection;
     document.title = "snake-game";
+
+
   }
 
   componentDidUpdate() {
@@ -111,7 +124,8 @@ class Snake extends Component {
     for (let i = 0; i < snake.length - 3; i++) {
       if (head.x === snake[i].x && head.y === snake[i].y) {
         this.setState(initialState);
-        alert(`game over: ${snake.length * 10}`);
+        score = snake.length;
+        alert(`game over score: ${score}`);
       }
     }
   };
@@ -141,6 +155,31 @@ class Snake extends Component {
       direction: direction,
     });
   };
+  nextPage = () => { 
+    // fetching data from ingredients
+    const mealData = {
+        name: this.props.router.query.name,
+        image_path: this.props.router.query.image_path,
+        ingredients: this.props.router.query.ingredients,
+        method: this.props.router.query.method,
+        author: this.props.router.query.author,
+        description: this.props.router.query.description,
+      };
+    
+    console.log(mealData);
+
+    this.props.router.push({pathname: "/cook",
+      query: {
+          name: mealData.name,
+          image_path: mealData.image_path,
+          ingredients: mealData.ingredients,
+          method: mealData.method,
+          author: mealData.author,
+          description: mealData.description,
+      },})
+  }
+  
+
 
   render() {
     const displayRows = this.state.rows.map((row, i) =>
@@ -155,18 +194,21 @@ class Snake extends Component {
         );
       })
     );
+    
     return (
       <div className="a">
-        <ul>
-          <li>"Space" to pause</li>
-          <li>"Arrow keys" to start and move!</li>
-        </ul>
+        <h1>Are you human??</h1>
+        <h1>obtain a score of ___ or higher to proceed</h1>
         <div className="snake-container">
           <div className="grid">{displayRows}</div>
         </div>
+        {
+          score >= 0 && 
+          <button className="bg-pink-400 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl" onClick={(e) => this.nextPage()}>Go to cook</button>
+            
+        }
+        
       </div>
     );
   }
-}
-
-export default Snake;
+})

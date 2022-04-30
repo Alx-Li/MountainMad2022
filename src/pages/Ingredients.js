@@ -38,7 +38,7 @@ function Ingredients() {
       author: AuthorInputRef.current.value,
       description: DiscInputRef.current.value,
     };
-
+    /*
     // use of Fetch API to make a request to the new-meal api and get back a response
     const response = await fetch("/api/new-meal", {
       method: "POST",
@@ -52,14 +52,25 @@ function Ingredients() {
     const data = await response.json();
 
     console.log(data);
-
+    */
     router.push({
+      pathname: "/snake",
+      query: {
+        name: mealNameInputRef.current.value,
+        image_path: mealImagePathInputRef.current.value,
+        ingredients: ingredientVal + " ",
+        method: CookingMethodInputRef.current.value,
+        author: AuthorInputRef.current.value,
+        description: DiscInputRef.current.value,
+      },
+      
+      /*
       pathname: "/cook",
       query: {
         ingredients: ingredientVal,
         cookingType: CookingMethodInputRef.current.value,
-      },
-    });
+      */}
+    );
     //router.replace("/");
   };
 
