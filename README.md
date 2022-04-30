@@ -7,7 +7,18 @@
  
  ## Visit the website to see it in action!!
 
-
-
  
- Does not work on small windows
+
+Does not work on small windows
+
+```
+Contributors:
+
+Team L.e.G.
+Contributors:
+ - John Maveric | jmr26@sfu.ca
+ - Alexander X Li | axl2@sfu.ca
+ - Genesis Basa | grb2@sfu.ca
+ - Sean Chan | smc26@sfu.ca
+ - Hobbes Chiong | shc26@sfu.ca
+```
