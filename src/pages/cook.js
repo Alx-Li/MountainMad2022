@@ -2,12 +2,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import woman from "../public/img/old-woman.png";
 import { useState } from "react";
+//import useROuter
+import { useRouter } from "next/router";
 //import pot no lid
 import pot from "../public/img/pot_no_lid.png";
 import grill from "../public/img/grill.png";
 
-function comp() {
-  const ingredients = ["one", "two", "three", "four"];
+function cook() {
+  const router = useRouter();
+  const query = router.query;
+  const [ingredients, setIngredients] = useState(query.ingredients);
   const cookingType = "pot";
   const [itemsDragged, setItemsDragged] = useState(0);
   const [showButton, setShowButton] = useState(false);
@@ -53,4 +57,4 @@ function comp() {
     </div>
   );
 }
-export default comp;
+export default cook;

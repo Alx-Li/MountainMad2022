@@ -4,7 +4,10 @@ import { MongoClient } from "mongodb";
 //import navbar
 import Navbar from "../components/Navbar";
 
+
 function Recipes(props) {
+
+
   return (
     <div>
       <main className="bg-night-200 z-0 min-h-screen p-4 sm:p-12">
