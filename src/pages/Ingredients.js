@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Navbar from "../components/Navbar";
 import { useRef } from "react";
 import { useRouter } from "next/router";
@@ -40,10 +40,24 @@ function Ingredients() {
     console.log(data);
 
     // redirects this page to the Homepage
-    router.replace("/");
+    if (CookingMethodInputRef.current.value=='fry'){
+      console.log(CookingMethodInputRef.current.value);
+      router.replace("/fry");
+    }
+    else if (CookingMethodInputRef.current.value=='oven'){
+      console.log(CookingMethodInputRef.current.value);
+      router.replace("/fry");
+    }
+    else if (CookingMethodInputRef.current.value=='grill'){
+      console.log(CookingMethodInputRef.current.value);
+      router.replace("/oven");
+    }
+    //router.replace("/");
   };
 
   const router = useRouter();
+
+  //=================== next step handling ============
 
   const INPUT_STYLE =
     "my-2 p-2 border border-gray-300 focus:ring-2 focus:ring-indigo-300 focus:ring-opacity-50 focus:outline-none w-full h-10 rounded-md";
@@ -103,15 +117,14 @@ function Ingredients() {
             ref={CookingMethodInputRef}
             className={INPUT_STYLE}
           /> */}
-          <select className={INPUT_STYLE} id="cars">
-            <option value="fry">Deep Fry</option>
+          <select className={INPUT_STYLE} ref={CookingMethodInputRef}>
+            <option value="fry" event='fry'>Deep Fry</option>
             <option value="oven">Oven</option>
             <option value="grill">Grill</option>
           </select>
           <button
             type="submit"
-            className="bg-pink-400 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl"
-          >
+            className="bg-pink-400 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl" >
             Let's Cook Grandma!
           </button>
         </div>
