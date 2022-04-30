@@ -81,7 +81,7 @@ function cook() {
               author: mealData.author,
               description: mealData.description,
           },})
-      }}>Go to temp2</button>
+      }}>Review & Submit Your Recipe!!</button>
       )}
       {method === "pot" && (
         <div className="z-3 flex overflow-y-hidden justify-center">

@@ -26,11 +26,12 @@ function Recipes(props) {
 }
 
 export async function getStaticProps() {
-  const DATABASE_NAME = "Grandma";
-  const DATABASE_PASSWORD = "1234";
+  const DATABASE_NAME = process.env.DATABASE_NAME;
+  const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
 
   const client = await MongoClient.connect(
-    `mongodb+srv://test:1234@mountain.rpwsn.mongodb.net/Grandma?retryWrites=true&w=majority`
+    process.env.MONGO_URL
+    //`mongodb+srv://test:1234@mountain.rpwsn.mongodb.net/Grandma?retryWrites=true&w=majority`
   );
   const db = client.db();
   const mealsCollection = db.collection("meals");

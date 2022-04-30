@@ -197,13 +197,17 @@ export default withRouter(class Snake extends Component {
     
     return (
       <div className="a">
-        <h1>Are you human??</h1>
-        <h1>obtain a score of ___ or higher to proceed</h1>
-        <div className="snake-container">
+        <h1 className="mt-5 text-5xl font-bold flex justify-center text-code text-blue-500 comic">
+            Are You Human?
+          </h1>
+          <h2 className="text-lg flex justify-center mb-12 text-blue-500 text-code mt-1 comic">
+            beat the snake game with a score of 10 or greater to proceed
+          </h2>
+        <div className="h-[50%]">
           <div className="grid">{displayRows}</div>
         </div>
         {
-          score >= 0 && 
+          score >= 10 && 
           <button className="bg-pink-400 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl" onClick={(e) => this.nextPage()}>Go to cook</button>
             
         }
