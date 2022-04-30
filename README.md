@@ -12,8 +12,6 @@
 *not optimized for small windows*
 
 ```
-Contributors:
-
 Team L.e.G.
 Contributors:
  - John Maveric | jmr26@sfu.ca
