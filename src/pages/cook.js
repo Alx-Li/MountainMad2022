@@ -16,6 +16,17 @@ import tendonImg from "../public/img/tendon.png";
 function cook() {
   const router = useRouter();
   const query = router.query;
+  const mealData = {
+      name: query.name,
+      image_path: query.image_path,
+      ingredients: query.ingredients,
+      method: query.method,
+      author: query.author,
+      description: query.description,
+    };
+  
+  console.log(mealData);
+  
   const ingredientImgs = {
     heart: heartImg.src,
     leg: legImg.src,
@@ -23,8 +34,8 @@ function cook() {
     tendon: tendonImg.src,
   };
 
-  const ingredients, setIngredients] = useState(query.ingredients);
-  const [cookingType, setCookingType] = useState(query.cookingType);
+  const [ingredients, setIngredients] = useState(query.ingredients);
+  const [method, setMethod] = useState(query.method);
   const [itemsDragged, setItemsDragged] = useState(0);
   const [showButton, setShowButton] = useState(false);
   function checkIngredientsMoved() {
@@ -40,6 +51,7 @@ function cook() {
         Drag the ingredients in!
       </h1>
       <div className="flex flex-row gap-12 justify-center items-center">
+        {console.log(ingredients)}
         {ingredients.map((ingredient) => (
           <motion.div
             className="z-0 flex flex-row justify-center"
@@ -52,22 +64,37 @@ function cook() {
         ))}
       </div>
       {showButton && (
-        <button className="comic fixed bottom-0 right-0 m-12 drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400">
-          Continue
-        </button>
+        // <button 
+        // onClick
+        // className="comic fixed bottom-0 right-0 m-12 drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400">
+        //   Continue
+        // </button>
+        <button
+        className="comic fixed bottom-0 right-0 m-12 drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 "
+         onClick={() => {
+          router.push({pathname: "/temp2",
+          query: {
+              name: mealData.name,
+              image_path: mealData.image_path,
+              ingredients: mealData.ingredients,
+              method: mealData.method,
+              author: mealData.author,
+              description: mealData.description,
+          },})
+      }}>Go to temp2</button>
       )}
-      {cookingType === "pot" && (
+      {method === "pot" && (
         <div className="z-3 flex overflow-y-hidden justify-center">
           <img src={pot.src}></img>
         </div>
       )}
-      {cookingType === "oven" && (
+      {method === "oven" && (
         <div className="z-3 flex overflow-y-hidden justify-center">
           <img src={oven.src}></img>
         </div>
       )}
       {console.log(oven.src)}
-      {cookingType === "grill" && (
+      {method === "grill" && (
         <div className="z-3 flex overflow-y-hidden justify-center ">
           <img className="bottom-0 mr-20" src={grill.src}></img>
         </div>

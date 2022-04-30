@@ -58,7 +58,7 @@ function Ingredients() {
       query: {
         name: mealNameInputRef.current.value,
         image_path: mealImagePathInputRef.current.value,
-        ingredients: ingredientVal + " ",
+        ingredients: ingredientVal,
         method: CookingMethodInputRef.current.value,
         author: AuthorInputRef.current.value,
         description: DiscInputRef.current.value,
@@ -68,7 +68,7 @@ function Ingredients() {
       pathname: "/cook",
       query: {
         ingredients: ingredientVal,
-        cookingType: CookingMethodInputRef.current.value,
+        method: CookingMethodInputRef.current.value,
       */}
     );
     //router.replace("/");

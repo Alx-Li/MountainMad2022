@@ -28,13 +28,13 @@ const MealItem = ({ meal }) => {
   // last commit
   return (
     //relative rounded-lg shadow-xl bg-night-100 p-8 space-8
-    <div className="relative w-1/2 h-auto shadow-lg rounded-lg bg-green-300 drop-shadow-3xl p-4 z-0 ">
+    <div className="relative h-auto shadow-lg rounded-lg bg-green-300 drop-shadow-3xl p-4 z-0 ">
       <img src={image_url} className="w-full h-auto" alt="Grandma couldn't figure out how to work the camera :(" />
       <h3 className="text-xl font-normal text-center comic py-2">{meal.name}</h3>
       <div className="">
         <div className="px-3 font-light bg-white text-oragne-300 comic">
           <p className="self-start italic pb-2 text-center">{meal.description}</p>
-          <p>Ingredients: <span className="italic">{meal.ingredients}</span></p>
+          <p>Ingredients: <span className="italic">{meal.ingredients.toString()}</span></p>
           <p>Cooking Method: {meal.method}</p>
           <p className="">Made by: {meal.author}</p>
         </div>

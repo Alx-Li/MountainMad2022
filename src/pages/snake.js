@@ -167,7 +167,7 @@ export default withRouter(class Snake extends Component {
       };
     
     console.log(mealData);
-
+    console.log("from snake");
     this.props.router.push({pathname: "/cook",
       query: {
           name: mealData.name,

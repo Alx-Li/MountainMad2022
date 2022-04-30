@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-
+import MealItem from "../components/MealItem";
 function temp2() {
     const router = useRouter();
 //==========
@@ -12,6 +12,9 @@ function temp2() {
         author: query.author,
         description: query.description,
     };
+
+    console.log(mealData);
+    console.log("from temp 2");
 //============
     
     
@@ -44,14 +47,10 @@ function temp2() {
 
     return(
         <div>
-            <h1>{mealData.name}</h1>
-            <img src={mealData.image_path} alt="meal"/>
-            <p>{mealData.ingredients}</p>
-            <p>{mealData.method}</p>
-            <p>{mealData.author}</p>
-            <p>{mealData.description}</p>
-            <button className="bg-pink-400 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl" onClick={newMealHandler}>Let's Cook Grandma!</button>
+            <MealItem meal={mealData} newMealHandler={newMealHandler}/>
+            <button className="btn btn-primary" onClick={newMealHandler}>Add to Cookbook</button>
         </div>
+        
     );
 }
 export default temp2;
