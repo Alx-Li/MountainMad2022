@@ -79,7 +79,7 @@ function Ingredients() {
   const INPUT_STYLE =
     "my-2 p-2 border border-gray-300 focus:ring-2 focus:ring-indigo-300 focus:ring-opacity-50 focus:outline-none w-full h-10 rounded-md";
   return (
-    <div className="flex flex-start">
+    <div className="grid justify-items-start">
       <form className="comic" onSubmit={newMealHandler}>
       <div className="mt-4 ml-8">
         <div className=" bg-orange-300 flex-initial w-80 flex-col px-12 py-12 max-w-3xl mx-auto shadow-xl rounded-2xl m-2">
@@ -140,10 +140,10 @@ function Ingredients() {
           </button>
         </div>
       </div>
-      <div>
-        <div className="w-100 h-100 bg-orange-300">e</div>
-      </div>
       </form>
+      <div className="justify-self-end p-5">
+        <div className="w-100 h-100 bg-orange-300">the box justified to the right</div>
+      </div>
     </div>
   );
 }
