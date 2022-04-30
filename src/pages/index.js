@@ -11,6 +11,13 @@ const HomePage = (props) => {
   return (
     <div className="bg-[url('https://cdnb.artstation.com/p/assets/images/images/019/146/383/large/cartoonik-animation-cs-kitchen-bg.jpg?1562206094')] min-w-screen min-h-screen overflow-hidden bg-cover bg-center bg-clip-content">
       <img className="mx-auto my-auto" src="https://i.ibb.co/hmkx9gs/Logo.png"/>
+      <div className="h-20 mt-10 flex justify-center">
+      <Link href="/Ingredients">
+      <button className="drop-shadow-2xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400">
+          Create Recipes With Grandma Right Now!
+        </button>
+        </Link>
+      </div>
     </div>
   );
 };
