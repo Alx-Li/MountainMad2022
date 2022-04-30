@@ -72,7 +72,7 @@ function cook() {
         <button
         className="comic fixed bottom-0 right-0 m-12 drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 "
          onClick={() => {
-          router.push({pathname: "/temp2",
+          router.push({pathname: "/submit",
           query: {
               name: mealData.name,
               image_path: mealData.image_path,

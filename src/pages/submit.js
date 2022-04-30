@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import MealItem from "../components/MealItem";
-function temp2() {
+function submit() {
     const router = useRouter();
 //==========
     const query = router.query;
@@ -46,11 +46,11 @@ function temp2() {
     }
 
     return(
-        <div>
+        <div className="flex flex-row justify-center align-middle z-0 gap-20 ">
             <MealItem meal={mealData} newMealHandler={newMealHandler}/>
-            <button className="btn btn-primary" onClick={newMealHandler}>Add to Cookbook</button>
+            <button className="comic fixed bottom-0 right-0 m-12 drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 " onClick={newMealHandler}>Add to Cookbook</button>
         </div>
         
     );
 }
-export default temp2;
+export default submit;

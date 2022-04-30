@@ -22,6 +22,7 @@ function validateURL(string) {
 }
 
 const MealItem = ({ meal }) => {
+  var mealArr = [meal.ingredients];
   var image_url = meal.image;
   if(!validateURL(meal.image))
     image_url = getGrandma();
@@ -34,7 +35,7 @@ const MealItem = ({ meal }) => {
       <div className="">
         <div className="px-3 font-light bg-white text-oragne-300 comic">
           <p className="self-start italic pb-2 text-center">{meal.description}</p>
-          <p>Ingredients: <span className="italic">{meal.ingredients.toString()}</span></p>
+          <p>Ingredients: <span className="italic">{mealArr.toString()}</span></p>
           <p>Cooking Method: {meal.method}</p>
           <p className="">Made by: {meal.author}</p>
         </div>

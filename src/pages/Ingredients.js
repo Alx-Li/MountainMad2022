@@ -112,6 +112,7 @@ function Ingredients() {
             <Select
               isMulti
               name="ingredients"
+              placeholder="Select 2+ Ingredients"
               options={options}
               onChange={ingredientHandler}
             />
