@@ -9,16 +9,13 @@ function Recipes(props) {
     <div>
       <main className="bg-night-200 min-h-screen p-4 sm:p-12">
         <section className="container mx-auto ">
-          <h1 className="text-5xl flex justify-center text-code text-blue-500">
+          <h1 className="text-5xl flex justify-center text-code text-blue-500 comic">
             Recipes
           </h1>
-          <h2 className="text-lg flex justify-center mb-12 text-blue-500 text-code mt-1">
+          <h2 className="text-lg flex justify-center mb-12 text-blue-500 text-code mt-1 comic">
             All the tasty recipes
           </h2>
-
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <MealList meals={props.mealList} />
-          </section>
+          <MealList meals={props.mealList} />
         </section>
       </main>
     </div>

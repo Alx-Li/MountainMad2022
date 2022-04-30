@@ -1,18 +1,16 @@
 const MealItem = ({ meal }) => {
   // last commit
   return (
-    <div className="w-1/4 p-8 shadow-lg rounded-lg bg-yellow-50">
-      <img src={meal.image} className="w-auto h-auto" alt="Chicken Salad" />
-      <div className="text-center py-2">
-        <h3 className="text-xl font-normal">
-          {meal.name}
-          <span className="px-3 font-light text-yellow-500">
-            ({meal.ingredients} ingredients)
-            ({meal.method} method)
-            ({meal.description} description)
-          </span>
-        </h3>
-        <p className="text-gray-500 text-base">{meal.author}</p>
+    <div className="shadow-lg rounded-lg bg-orange-300 p-4">
+      <img src={meal.image} className="w-full h-auto" alt="Chicken Salad" />
+      <h3 className="text-xl font-normal text-center comic py-2">{meal.name}</h3>
+      <div className="">
+        <div className="px-3 font-light bg-white text-oragne-300 comic">
+          <p className="self-start italic pb-2 text-center">{meal.description}</p>
+          <p>Ingredients: <span className="italic">{meal.ingredients}</span></p>
+          <p>Cooking Method: {meal.method}</p>
+          <p className="">Made by: {meal.author}</p>
+        </div>
       </div>
     </div>
   );
