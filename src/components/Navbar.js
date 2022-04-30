@@ -8,7 +8,7 @@ function Navbar() {
       
           <div className="p-5 mr-20 bg-blue-500 rounded-lg drop-shadow-3xl">
             <Link href="/">
-              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 "> About </a>
+              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 "> Home </a>
             </Link>
           </div>
           <div className="p-5 mr-20 bg-blue-500 rounded-lg drop-shadow-3xl">

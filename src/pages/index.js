@@ -10,7 +10,7 @@ const HomePage = (props) => {
 
   
   return (
-    <div >
+    <div className="bg-opacity-50 bg-white pb-8 rounded-3xl m-32 backdrop-blur-md shadow-xl">
       <img className="mx-auto my-10 justify-center items-center" src="https://i.ibb.co/GsrqJ6c/Logo.png"/>
       <div className="h-20 mt-10 flex justify-center">
       <Link href="/Ingredients">
