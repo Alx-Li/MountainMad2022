@@ -6,3 +6,6 @@
 .comic {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+.imgDarken { background-color: #000000 !important;}
+.imgDarken img { opacity: 0.2 !important; }
