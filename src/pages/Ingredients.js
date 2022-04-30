@@ -142,7 +142,7 @@ function Ingredients() {
             </select>
             <button
               type="submit"
-              className="bg-pink-400 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl"
+              className="bg-gradient-to-b from-pink-300 to-pink-400 hover:to-pink-600 text-white font-medium text-xl inline-flex  w-full items-center px-4 py-4 rounded-xl"
             >
               Let's Cook Grandma!
             </button>
