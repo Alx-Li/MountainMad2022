@@ -1,6 +1,7 @@
 import MealList from "../components/MealList";
 import { MongoClient } from "mongodb";
 
+
 import Link from "next/link";
 // get image from public/img/bgKitchen.jpg
 //import bgKitchen from "../public/img/kitchen.jpg";
