@@ -7,15 +7,15 @@ import Navbar from "../components/Navbar";
 function Recipes(props) {
   return (
     <div>
-      <main className="bg-night-200 min-h-screen p-4 sm:p-12">
+      <main className="bg-night-200 z-0 min-h-screen p-4 sm:p-12">
         <section className="container mx-auto ">
-          <h1 className="text-5xl flex justify-center text-code text-blue-500 comic">
+          <h1 className="text-5xl font-bold flex justify-center text-code text-blue-500 comic">
             Recipes
           </h1>
           <h2 className="text-lg flex justify-center mb-12 text-blue-500 text-code mt-1 comic">
             All the tasty recipes
           </h2>
-          <MealList meals={props.mealList} />
+          <MealList className="z-0" meals={props.mealList} />
         </section>
       </main>
     </div>
