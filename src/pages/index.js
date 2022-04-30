@@ -14,7 +14,7 @@ const HomePage = (props) => {
       <img className="mx-auto my-10 justify-center items-center" src="https://i.ibb.co/GsrqJ6c/Logo.png"/>
       <div className="h-20 mt-10 flex justify-center">
       <Link href="/Ingredients">
-      <button className="drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400">
+      <button className="drop-shadow-3xl text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 hover:to-orange-600">
           Create Recipes With Grandma Right Now!
         </button>
         </Link>
