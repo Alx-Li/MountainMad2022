@@ -23,7 +23,7 @@ function cook() {
     tendon: tendonImg.src,
   };
 
-  const ingredients, setIngredients] = useState(query.ingredients);
+  const [ingredients, setIngredients] = useState(query.ingredients);
   const [cookingType, setCookingType] = useState(query.cookingType);
   const [itemsDragged, setItemsDragged] = useState(0);
   const [showButton, setShowButton] = useState(false);
