@@ -125,7 +125,9 @@ export default withRouter(class Snake extends Component {
       if (head.x === snake[i].x && head.y === snake[i].y) {
         this.setState(initialState);
         score = snake.length;
-        alert(`game over score: ${score}`);
+        if (score < 10) {
+          alert(`try again`);
+        };
       }
     }
   };
@@ -201,7 +203,7 @@ export default withRouter(class Snake extends Component {
             Are You Human?
           </h1>
           <h2 className="text-lg flex justify-center mb-12 text-blue-500 text-code mt-1 comic">
-            beat the snake game with a score of 10 or greater to proceed
+            beat the snake game with a score of 10 or greater to proceed <br></br> use your arrow keys to start
           </h2>
         <div className="h-[50%]">
           <div className="grid">{displayRows}</div>

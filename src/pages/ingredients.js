@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Select from "react-select";
 import { useRef } from "react";
 import { useRouter } from "next/router";
-import { useAppContext } from "../state";
 
 function Ingredients() {
   const mealNameInputRef = useRef();
