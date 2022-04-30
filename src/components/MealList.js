@@ -22,9 +22,9 @@ const MealList = (props) => {
       {/* {props.meals.map((meal) => (
         <MealItem meal={meal} index={index} key={meal.id} />
       ))} */}
-      <button className="bg-orange-300 text-3xl h-16 w-32 rounded-xl text-white comic shadow-md" onClick={(e) => decreaseIndex(e)}>Left</button>
+      <button className="bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 text-3xl h-16 w-32 rounded-xl text-white comic shadow-md hover:to-orange-600" onClick={(e) => decreaseIndex(e)}>Left</button>
       <MealItem meal={props.meals[index]} key={index} />
-      <button className="bg-orange-300 text-3xl h-16 w-32 rounded-xl text-white comic shadow-md" onClick={(e) => increaseIndex(e)}>Right</button>
+      <button className="bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 text-3xl h-16 w-32 rounded-xl text-white comic shadow-md hover:to-orange-600" onClick={(e) => increaseIndex(e)}>Right</button>
     </div>
 
   );
