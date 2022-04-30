@@ -13,7 +13,7 @@ import legImg from "../public/img/leg.png";
 import stomachImg from "../public/img/stomach.png";
 import tendonImg from "../public/img/tendon.png";
 
-function cook() {
+const cook = () => {
   const router = useRouter();
   const query = router.query;
   const mealData = {
@@ -52,7 +52,7 @@ function cook() {
       </h1>
       <div className="flex flex-row gap-12 justify-center items-center">
         {console.log(ingredients)}
-        {ingredients.map((ingredient) => (
+        {ingredients && ingredients.map((ingredient) => (
           <motion.div
             className="z-0 flex flex-row justify-center"
             drag
