@@ -8,17 +8,17 @@ function Navbar() {
       
           <div className="p-5 mr-20 bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg drop-shadow-3xl">
             <Link href="/">
-              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400"> About </a>
+              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 hover:to-orange-600"> About </a>
             </Link>
           </div>
           <div className="p-5 mr-20 bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg drop-shadow-3xl">
             <Link href="/Recipes">
-              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 ">Recipes</a>
+              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 hover:to-orange-600 ">Recipes</a>
             </Link>
           </div>
           <div className="p-5 bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg drop-shadow-3xl">
             <Link href="/Ingredients">
-              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-orange-300 hover:bg-orange-400 ">Create</a>
+              <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 hover:to-orange-600 ">Create</a>
             </Link>
           </div>
       </div>

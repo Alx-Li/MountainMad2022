@@ -73,8 +73,8 @@ function Ingredients() {
     <div className="flex">
       <form className="comic" onSubmit={newMealHandler}>
         <div className="mt-4 ml-8">
-          <div className=" bg-orange-300 flex-initial w-80 flex-col px-12 py-6 max-w-3xl mx-auto shadow-xl rounded-2xl m-2">
-            <h1 className="Item 1 comic rounded-lg  p-1 text-2xl text-white">
+          <div className="bg-gradient-to-b from-orange-300 to-orange-500 flex-initial w-80 flex-col px-12 py-6 max-w-3xl mx-auto shadow-xl rounded-2xl m-2">
+            <h1 className="Item 1 comic rounded-lg  p-1 text-2xl text-white drop-shadow-4xl">
               Ingredients
             </h1>
             <input
@@ -113,8 +113,8 @@ function Ingredients() {
               ref={DiscInputRef}
             />
           </div>
-          <div className="bg-orange-300 flex-initial w-80 flex-col px-12 py-6 max-w-3xl mx-auto shadow-xl rounded-2xl">
-            <h1 className="Item 1 comic rounded-lg  p-1 text-2xl text-white">
+          <div className="bg-gradient-to-b from-orange-300 to-orange-500 flex-initial w-80 flex-col px-12 py-6 max-w-3xl mx-auto shadow-xl rounded-2xl">
+            <h1 className="Item 1 comic rounded-lg  p-1 text-2xl text-white drop-shadow-4xl">
               Cooking Method
             </h1>
             {/* <input
@@ -139,7 +139,7 @@ function Ingredients() {
         </div>
       </form>
       <div className="p-5 flex justify-center align-middle">
-        <div className="w-100 h-100 bg-orange-300">
+        <div className="w-100 h-100 bg-gradient-to-b from-orange-300 to-orange-500">
           the box justified to the right
         </div>
       </div>
