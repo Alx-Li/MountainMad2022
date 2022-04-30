@@ -44,7 +44,7 @@ function submit() {
   
         console.log(data);
 
-        router.replace("/Recipes")
+        router.replace("/recipes")
     }
 
     return(

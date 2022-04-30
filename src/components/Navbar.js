@@ -14,12 +14,12 @@ function Navbar() {
             </Link>
           </div>
           <div className="p-5 mr-20 bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg drop-shadow-3xl">
-            <Link href="/Recipes">
+            <Link href="/recipes">
               <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 hover:to-orange-600 ">Recipes</a>
             </Link>
           </div>
           <div className="p-5 bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg drop-shadow-3xl">
-            <Link href="/Ingredients">
+            <Link href="/ingredients">
               <a className="comic text-2xl font-bold text-white p-2 pl-20 pr-20 rounded-lg shadow-inner bg-gradient-to-b from-orange-300 to-orange-500 hover:from-orange-600 hover:to-orange-600 ">Create</a>
             </Link>
           </div>
