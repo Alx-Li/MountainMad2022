@@ -28,7 +28,7 @@ const MealItem = ({ meal }) => {
   // last commit
   return (
     <div className="shadow-lg rounded-lg bg-orange-300 p-4">
-      <img src={image_url} className="w-full h-auto" alt="Chicken Salad" />
+      <img src={image_url} className="w-full h-auto" alt="Grandma couldn't figure out how to work the camera :(" />
       <h3 className="text-xl font-normal text-center comic py-2">{meal.name}</h3>
       <div className="">
         <div className="px-3 font-light bg-white text-oragne-300 comic">
