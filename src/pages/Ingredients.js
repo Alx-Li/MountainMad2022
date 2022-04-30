@@ -46,11 +46,11 @@ function Ingredients() {
     }
     else if (CookingMethodInputRef.current.value=='oven'){
       console.log(CookingMethodInputRef.current.value);
-      router.replace("/fry");
+      router.replace("/oven");
     }
     else if (CookingMethodInputRef.current.value=='grill'){
       console.log(CookingMethodInputRef.current.value);
-      router.replace("/oven");
+      router.replace("/grill");
     }
     //router.replace("/");
   };
