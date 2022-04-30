@@ -16,9 +16,10 @@ function Ingredients() {
 
   const [ingredientVal, ingredientGet] = useState();
   const options = [
-    { value: "Chocolate", label: "Chocolate" },
-    { value: "Strawberry", label: "Strawberry" },
-    { value: "Vanilla", label: "Vanilla" },
+    {value: 'heart', label: 'Heart'},
+    {value: 'leg', label: 'Leg'},
+    {value: 'stomach', label: 'Stomach'},
+    {value: 'tendon', label: 'Tendon'}
   ];
 
   const ingredientHandler = (e) => {
@@ -124,7 +125,7 @@ function Ingredients() {
             className={INPUT_STYLE}
           /> */}
             <select className={INPUT_STYLE} ref={CookingMethodInputRef}>
-              <option value="fry">Deep Fry</option>
+              <option value="pot">Pot</option>
               <option value="oven">Oven</option>
               <option value="grill">Grill</option>
             </select>

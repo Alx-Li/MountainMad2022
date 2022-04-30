@@ -1,18 +1,30 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
-import woman from "../public/img/old-woman.png";
+
 import { useState } from "react";
-//import useROuter
 import { useRouter } from "next/router";
-//import pot no lid
+
 import pot from "../public/img/pot_no_lid.png";
+import oven from "../public/img/oven.png";
 import grill from "../public/img/grill.png";
+
+//import body parts
+import heartImg from "../public/img/heart.png";
+import legImg from "../public/img/leg.png";
+import stomachImg from "../public/img/stomach.png";
+import tendonImg from "../public/img/tendon.png";
 
 function cook() {
   const router = useRouter();
   const query = router.query;
+  const ingredientImgs = {
+    heart: heartImg.src,
+    leg: legImg.src,
+    stomach: stomachImg.src,
+    tendon: tendonImg.src,
+  };
+
   const [ingredients, setIngredients] = useState(query.ingredients);
-  const cookingType = "pot";
+  const [cookingType, setCookingType] = useState(query.cookingType);
   const [itemsDragged, setItemsDragged] = useState(0);
   const [showButton, setShowButton] = useState(false);
   function checkIngredientsMoved() {
@@ -35,7 +47,7 @@ function cook() {
             dragConstraints={{}}
             onDragStart={(event, info) => checkIngredientsMoved()}
           >
-            <div>{ingredient}</div>
+            <img src={ingredientImgs[ingredient]}></img>
           </motion.div>
         ))}
       </div>
@@ -49,6 +61,12 @@ function cook() {
           <img src={pot.src}></img>
         </div>
       )}
+      {cookingType === "oven" && (
+        <div className="z-3 flex overflow-y-hidden justify-center">
+          <img src={oven.src}></img>
+        </div>
+      )}
+      {console.log(oven.src)}
       {cookingType === "grill" && (
         <div className="z-3 flex overflow-y-hidden justify-center ">
           <img className="bottom-0 mr-20" src={grill.src}></img>
