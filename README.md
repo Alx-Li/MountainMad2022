@@ -9,7 +9,7 @@
 
  
 
-Does not work on small windows
+*not optimized for small windows*
 
 ```
 Contributors:
