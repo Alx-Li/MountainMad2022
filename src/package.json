@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,9 @@
     "react-dom": "^18.1.0",
     "react-select": "^5.3.1",
     "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.5"
   }
 }
