@@ -32,6 +32,6 @@ If the deployed version doesn't work:
 - `cd src`
 - `npm i`
 - `npm run dev`
-
+- please contact me for the .env file or create your own mongoDB atlas
 
 We hope you enjoy! :D 
